@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <Winsock2.h>
-#include<WS2tcpip.h>
 #pragma comment(lib,"ws2_32.lib")
 using namespace std;
 void main()
@@ -26,7 +25,7 @@ void main()
 	SOCKADDR_IN addrSrv;
 	addrSrv.sin_addr.S_un.S_addr = htonl(INADDR_ANY);
 	addrSrv.sin_family = AF_INET;
-	addrSrv.sin_port = htons(5040);
+	addrSrv.sin_port = htons(6000);
 
 	bind(sockSrv, (SOCKADDR*)&addrSrv, sizeof(SOCKADDR));
 
